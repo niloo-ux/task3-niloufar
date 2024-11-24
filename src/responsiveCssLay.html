@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive web page</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color:bisque;
+            direction: rtl;
+            overflow-x: hidden;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            width: 93vw;
+            padding-inline: 30px;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 2%;
+        }
+        #hamburger{
+            display: none;
+        }
+        #logo{
+            display:flex;
+        }
+        @media (max-width:600px){
+            #logo{
+                display:none;
+            }
+            ul{
+                display: none;
+            }
+            #hamburger{
+                display: flex;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="hamburger" src="/src/images/hamburger-menu.svg" alt="hamburgermenu" width="30px" height="30px"/>
+        <ul>
+            <li><a href="#">صفحه ی اصلی</li>
+            <li><a href="#">درباره ما</li>
+            <li><a href="#">ارتباط با ما</li>
+            <li><a href="#">ویدوئوهای آموزشی</li>
+        </ul>
+        <img id="logo" src="/src/images/programming.svg" width="100" height="100">
+    </header>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxShadow-transition</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        overflow-x: hidden;
+        background-color: bisque;
+      }
+      @keyframes animation1 {
+        from {
+          margin-left: 0px;
+        }
+        to {
+          margin-left: 300px;
+        }
+      }
+
+      div {
+        box-shadow: none;
+        width: 15rem;
+        height: 10rem;
+        border: 2px solid #0000;
+        font-size: 24px;
+        background-color: grey;
+        box-shadow: -10px 10px 20px 10px #11a171 inset;
+        transition: background-color 2s ease-in-out;
+        transition: font-size 2s ease-in;
+        animation-name: animation1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+
+        position: relative;
+      }
+      div:hover {
+        font-size: 18px;
+        background-color: rgb(126, 125, 119);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>My third task</div>
+  </body>
+</html>
